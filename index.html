@@ -114,45 +114,65 @@
 			<footer class="container">
 				<nav>
 					<div class="footer-links">
-						<h1 class="title">About Us</h1>
-						<a href="#" class="link">Our Company</a>
-						<a href="#" class="link">Our Coffe</a>
-						<a href="#" class="link">Stories and News</a>
-						<a href="#" class="link">Starbucks Archive</a>
-						<a href="#" class="link">Investor Relations</a>
-						<a href="#" class="link">Customer Service</a>
+						<h1 class="title">
+							About Us <i class="fa-solid fa-chevron-down"></i>
+						</h1>
+						<div>
+							<a href="#" class="link">Our Company</a>
+							<a href="#" class="link">Our Coffe</a>
+							<a href="#" class="link">Stories and News</a>
+							<a href="#" class="link">Starbucks Archive</a>
+							<a href="#" class="link">Investor Relations</a>
+							<a href="#" class="link">Customer Service</a>
+						</div>
 					</div>
 					<div class="footer-links">
-						<h1 class="title">Careers</h1>
-						<a href="#" class="link">Culture and Value</a>
-						<a href="#" class="link">Inclusion, Diversity, and Equity</a>
-						<a href="#" class="link">College Achievement Plan</a>
-						<a href="#" class="link">Alumni Community</a>
-						<a href="#" class="link">U.S. Careers</a>
-						<a href="#" class="link">International Careers</a>
+						<h1 class="title">
+							Careers <i class="fa-solid fa-chevron-down"></i>
+						</h1>
+						<div>
+							<a href="#" class="link">Culture and Value</a>
+							<a href="#" class="link">Inclusion, Diversity, and Equity</a>
+							<a href="#" class="link">College Achievement Plan</a>
+							<a href="#" class="link">Alumni Community</a>
+							<a href="#" class="link">U.S. Careers</a>
+							<a href="#" class="link">International Careers</a>
+						</div>
 					</div>
 					<div class="footer-links">
-						<h1 class="title">Social Impact</h1>
-						<a href="#" class="link">People</a>
-						<a href="#" class="link">Planet</a>
-						<a href="#" class="link">
-							Environmental and Social Impact Reporting
-						</a>
+						<h1 class="title">
+							Social Impact <i class="fa-solid fa-chevron-down"></i>
+						</h1>
+						<div>
+							<a href="#" class="link">People</a>
+							<a href="#" class="link">Planet</a>
+							<a href="#" class="link">
+								Environmental and Social Impact Reporting
+							</a>
+						</div>
 					</div>
 					<div class="footer-links">
-						<h1 class="title">For Business Partners</h1>
-						<a href="#" class="link">Landlord Support Center</a>
-						<a href="#" class="link">Supplier</a>
-						<a href="#" class="link">Corporate Gift Card Sales</a>
-						<a href="#" class="link">Office and Foodservice Coffee</a>
+						<h1 class="title">
+							For Business Partners <i class="fa-solid fa-chevron-down"></i>
+						</h1>
+						<div>
+							<a href="#" class="link">Landlord Support Center</a>
+							<a href="#" class="link">Supplier</a>
+							<a href="#" class="link">Corporate Gift Card Sales</a>
+							<a href="#" class="link">Office and Foodservice Coffee</a>
+						</div>
 					</div>
 					<div class="footer-links">
-						<h1 class="title">Order and Pickup</h1>
-						<a href="#" class="link">Order on the App</a>
-						<a href="#" class="link">Order on the Web</a>
-						<a href="#" class="link">Delivery</a>
-						<a href="#" class="link">Order and Pickup Options</a>
-						<a href="#" class="link">Explore and Find Coffee for Home</a>
+						<h1 class="title">
+							Order and Pickup <i class="fa-solid fa-chevron-down"></i>
+						</h1>
+						<div>
+							<a href="#" class="link">Order on the App</a>
+							<a href="#" class="link">Order on the Web</a>
+							<a href="#" class="link">Delivery</a>
+							<a href="#" class="link">Order and Pickup Options</a>
+							<a href="#" class="link">Explore and Find Coffee for Home</a>
+						</div>
 					</div>
 				</nav>
 				<hr />
@@ -194,7 +214,12 @@
 				</ul>
 				<p>
 					© 2023 Starbucks Coffee Company. All rights reserved. UI Clone made by
-					Nicolas Perussi
+					<a
+						href="https://github.com/nicolasperussi"
+						target="_blank"
+						class="dev-name"
+						>Nicolas Perussi</a
+					>
 				</p>
 			</footer>
 		</section>
@@ -208,6 +233,18 @@
 				hamburgerIcon.classList.toggle('is-active');
 				mask.classList.toggle('is-active');
 				navbar.classList.toggle('is-active');
+				if (hamburgerIcon.classList.contains('is-active')) {
+					document.body.style.overflow = 'hidden';
+				} else {
+					document.body.style.overflow = 'auto';
+				}
+			});
+
+			const footerLinks = document.querySelectorAll('.footer-links');
+			footerLinks.forEach((link) => {
+				link.addEventListener('click', () => {
+					link.classList.toggle('is-active');
+				});
 			});
 		</script>
 	</body>
