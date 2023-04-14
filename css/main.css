@@ -6,6 +6,7 @@
 	--green-text: rgba(30, 57, 50, 1);
 	--green-text-transp: rgba(30, 57, 50, 0.1);
 	--hover-green: rgba(0, 117, 74, 1);
+	--primary-gray: rgba(0, 0, 0, 0.87);
 }
 
 html {
@@ -39,6 +40,12 @@ button:active {
 	width: 1440px;
 	margin: 0 auto;
 }
+
+section {
+	margin-top: 32px !important;
+}
+
+/* #region Header */
 
 header {
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06),
@@ -129,4 +136,214 @@ header nav .right-links .find-store i {
 
 .join-now > button:hover {
 	background-color: #4c4c4c;
+}
+
+/* #endregion */
+
+/* #region Rewards */
+#rewards {
+	display: flex;
+	color: var(--green-text);
+	background-color: #d4e9e2;
+}
+
+#rewards img {
+	width: 50%;
+}
+
+#rewards .ad {
+	padding: 3rem 0;
+	margin: 0 auto;
+	width: 35%;
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
+
+#rewards .ad .title {
+	font-size: 2.4rem;
+	line-height: 1.5;
+}
+
+#rewards .ad .text {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+#rewards .ad button {
+	font-size: 1.6rem;
+	color: var(--green-text);
+	border-color: var(--green-text);
+}
+
+#rewards .ad button:hover {
+	background-color: var(--green-text-transp);
+}
+/* #endregion */
+
+/* #region Promos */
+
+.promo {
+	display: flex;
+	color: var(--green-text);
+}
+
+.promo img {
+	width: 50%;
+}
+
+.promo .wrapper {
+	padding: 3.2rem;
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
+
+.promo .wrapper div {
+	margin: 0 auto;
+}
+
+.promo .wrapper div h1 {
+	font-size: 5rem;
+	line-height: 1.2;
+}
+
+.promo .wrapper div p {
+	font-size: 2.4rem;
+	line-height: 1.5;
+	margin: 3rem;
+}
+
+.promo .wrapper button {
+	font-size: 1.6rem;
+	color: var(--green-text);
+	border-color: var(--green-text);
+}
+
+.promo .wrapper button:hover {
+	background-color: var(--green-text-transp);
+}
+/* #endregion */
+
+#promo1 {
+	flex-direction: row-reverse;
+	background-color: #f6bed9;
+}
+
+#promo2 {
+	background-color: #fff4d4;
+}
+
+#promo3 {
+	flex-direction: row-reverse;
+	background-color: #d4e9e2;
+}
+
+.footer-section {
+	box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 -2px 2px rgba(0, 0, 0, 0.06),
+		0 0 2px rgba(0, 0, 0, 0.07);
+}
+
+footer nav {
+	display: flex;
+	gap: 3.2rem;
+}
+
+footer nav .footer-links {
+	display: flex;
+	flex-direction: column;
+	width: 190px;
+}
+
+footer nav .footer-links .title {
+	font-size: 2rem;
+	color: var(--gray-text);
+	font-weight: 500;
+	margin: 2rem 0;
+}
+
+footer nav .footer-links .link {
+	font-size: 1.6rem;
+	color: rgba(0, 0, 0, 0.58);
+	text-decoration: none;
+	margin: 1.5rem 0;
+	font-weight: 500;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+footer nav .footer-links .link:hover {
+	color: var(--primary-gray);
+}
+
+footer hr {
+	margin: 3.2rem 0;
+	border-color: var(--gray-text-transp);
+}
+
+.social {
+	display: flex;
+	gap: 16px;
+}
+
+.social .icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 45px;
+	height: 45px;
+	background-color: var(--gray-text);
+	border-radius: 50%;
+	color: white;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.social .icon .icon-hover {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	z-index: -1;
+	background-color: var(--gray-text-transp);
+	border-radius: 50%;
+	transition: all 0.2s ease;
+}
+
+.social .icon:hover > .icon-hover {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.info {
+	list-style: none;
+	display: flex;
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin: 24px 0;
+	color: var(--gray-text);
+}
+
+.info li a:nth-child(1) {
+	margin-left: 0 !important;
+}
+
+.info li a {
+	text-decoration: none;
+	color: var(--gray-text);
+	margin: 0 16px;
+}
+
+.info li span {
+	color: rgba(0, 0, 0, 0.58);
+	margin: 0 8px;
+}
+
+footer > p {
+	color: rgba(0, 0, 0, 0.58);
+	font-size: 1.4rem;
+	margin-bottom: 3.6rem;
+	font-weight: 500;
 }
