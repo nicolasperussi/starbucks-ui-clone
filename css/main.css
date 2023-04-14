@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+	--gray-text: rgba(33, 33, 33, 1);
+	--gray-text-transp: rgba(33, 33, 33, 0.1);
+	--green-text: rgba(30, 57, 50, 1);
+	--green-text-transp: rgba(30, 57, 50, 0.1);
+	--hover-green: rgba(0, 117, 74, 1);
+}
+
+html {
+	font-size: 62.5%;
+	overflow-y: scroll;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+button {
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 2rem;
+	padding: 6px 18px;
+	font-weight: 700;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+.container {
+	width: 1440px;
+	margin: 0 auto;
+}
+
+header {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.06),
+		0 0 2px rgba(0, 0, 0, 0.07);
+	height: 100px;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+header .logo {
+	position: absolute;
+	margin-left: 145px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+header .logo a {
+	display: block;
+}
+
+header .logo a img {
+	height: 50px;
+	width: 50px;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav ul {
+	list-style: none;
+	display: flex;
+	gap: 24px;
+}
+
+header nav .links .nav-link {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	color: var(--gray-text);
+	cursor: pointer;
+}
+
+header nav .links .nav-link:hover {
+	color: var(--hover-green);
+}
+
+header nav .right-links {
+	gap: 16px !important;
+}
+
+header nav .right-links .find-store {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: var(--gray-text);
+	cursor: pointer;
+	margin-right: 16px;
+}
+
+header nav .right-links .find-store:hover {
+	color: var(--hover-green);
+}
+
+header nav .right-links .find-store i {
+	font-size: 2rem;
+}
+
+.sign-in > button {
+	border-color: var(--gray-text);
+	color: var(--gray-text);
+}
+
+.sign-in > button:hover {
+	background-color: var(--gray-text-transp);
+}
+
+.join-now > button {
+	border-color: black;
+	color: white;
+	background-color: black;
+}
+
+.join-now > button:hover {
+	background-color: #4c4c4c;
+}
