@@ -19,7 +19,7 @@
 					<img src="./assets/logo.svg" alt="" />
 				</a>
 			</div>
-			<nav class="container">
+			<nav class="container main-nav">
 				<ul class="links">
 					<li class="nav-link">Menu</li>
 					<li class="nav-link">Rewards</li>
@@ -33,7 +33,29 @@
 					<li class="join-now"><button>Join now</button></li>
 				</ul>
 			</nav>
+			<nav class="hamburger-nav">
+				<ul class="links">
+					<li class="nav-link">Menu</li>
+					<li class="nav-link">Rewards</li>
+					<li class="nav-link">Gift Cards</li>
+				</ul>
+				<hr />
+				<ul class="right-links">
+					<li class="sign-in"><button>Sign in</button></li>
+					<li class="join-now"><button>Join now</button></li>
+					<li class="find-store">
+						<i class="fa-solid fa-location-dot"></i> Find a store
+					</li>
+				</ul>
+			</nav>
+			<div class="hamburger" id="hamburger">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
 		</header>
+
+		<div class="hamburger-nav-mask"></div>
 
 		<section id="rewards" class="container">
 			<img src="./assets/starbucks-rewards.webp" alt="" />
@@ -159,12 +181,16 @@
 				</div>
 				<ul class="info">
 					<li><a href="#">Privacy Notice</a></li>
-					<li><span>|</span><a href="#">Terms of Use</a></li>
+					<span>|</span>
+					<li><a href="#">Terms of Use</a></li>
+					<span>|</span>
 					<li>
-						<span>|</span><a href="#">Do Not Share My Personal Information</a>
+						<a href="#">Do Not Share My Personal Information</a>
 					</li>
-					<li><span>|</span><a href="#">CA Supply Chain Act</a></li>
-					<li><span>|</span><a href="#">Cookie Preferences</a></li>
+					<span>|</span>
+					<li><a href="#">CA Supply Chain Act</a></li>
+					<span>|</span>
+					<li><a href="#">Cookie Preferences</a></li>
 				</ul>
 				<p>
 					© 2023 Starbucks Coffee Company. All rights reserved. UI Clone made by
@@ -172,5 +198,17 @@
 				</p>
 			</footer>
 		</section>
+
+		<script>
+			const hamburgerIcon = document.querySelector('#hamburger');
+			const mask = document.querySelector('.hamburger-nav-mask');
+			const navbar = document.querySelector('.hamburger-nav');
+
+			hamburgerIcon.addEventListener('click', () => {
+				hamburgerIcon.classList.toggle('is-active');
+				mask.classList.toggle('is-active');
+				navbar.classList.toggle('is-active');
+			});
+		</script>
 	</body>
 </html>
